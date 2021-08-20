@@ -9,7 +9,7 @@ class OpenIDReader{
 	public function __construct(){
 		$this->ReadModels = [
 			'passport'=>[
-				'regex'=>"/([A-Z])([A-Z0-9<])([A-Z]{3})([A-Z<]{39})\s+([A-Z0-9<]{9})([0-9])([A-Z]{3})([0-9]{6})([0-9])([MF<])([0-9]{6})([0-9])([A-Z0-9<]{14})([0-9]<)([0-9])/",
+				'regex'=>"/([A-Z])([A-Z0-9<])([A-Z]{3})([A-Z<]{39})\s+([A-Z0-9<]{9})([0-9])([A-Z]{3})([0-9]{6})([0-9])([MF<])([0-9]{6})([0-9])([A-Z0-9<]{14})([0-9])([0-9])/",
 				'postFind'=>function($Data){
 					if(count($Data) !== 16){
 						return 'Invalid MRZ';
